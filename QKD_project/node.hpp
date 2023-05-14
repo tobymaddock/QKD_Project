@@ -16,10 +16,13 @@ public:
 	* Constructor for the Node class. 
 	* name: name of the given node
 	*/
-	string name;
-	Node(string name) {
-		name = name;
-	}
+
+	Node(string name); //constructor
+	~Node(); // node destructor
+	string getName(); // accessor
+
+private:
+	string itsName; //atribute
 };
 
 class QKD_Node: private Node {

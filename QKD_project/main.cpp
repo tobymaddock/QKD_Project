@@ -4,6 +4,7 @@
 # include <sstream>
 # include <string>
 # include <algorithm>
+# include "node.hpp"
 
 
 using namespace std;
@@ -62,8 +63,8 @@ int main() {
 
 	std::cout << "bb84 protocol:" << bb84_protocol(alice_basis, bob_basis, alice_states,
 		bob_states) << "\n";
-	std::cout << e91_protocol() << "\n";
-	std::cout << bbm92_protocol() << "\n";
 
+	Node firstNode = Node("importantNode");
+	std::cout << firstNode.getName();
 	return 0;
 }
