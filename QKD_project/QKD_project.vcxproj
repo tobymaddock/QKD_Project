@@ -129,8 +129,10 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="node.cpp" />
+    <ClCompile Include="protocols.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="keyBits.hpp" />
     <ClInclude Include="node.hpp" />
     <ClInclude Include="protocols.hpp" />
   </ItemGroup>

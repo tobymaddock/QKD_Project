@@ -1,5 +1,4 @@
 // node classes - idea is that various nodes (source, receiver etc) inherit from this
-#include "protocols.hpp"
 # include <iostream>
 # include <bitset>
 # include <vector>
@@ -26,20 +25,19 @@ private:
 };
 
 class QKD_Node: private Node {
-protected:
-
 public:
-	
+	void communicateClassically();
+private:
 };
 
 class QKD_Node_Source: private QKD_Node {
 public:
-	void send_bits() {
-	}
+	void sendBits();
+private:
+	string lightSource;
 };
 
-class QKD_Node_receiver : private QKD_Node {
+class QKD_Node_Receiver : private QKD_Node {
 public:
-	void get_bits() {
-	}
+	void get_bits();
 };

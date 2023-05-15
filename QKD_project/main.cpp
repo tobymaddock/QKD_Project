@@ -5,7 +5,7 @@
 # include <string>
 # include <algorithm>
 # include "node.hpp"
-
+# include "keyBits.hpp"
 
 using namespace std;
 
@@ -39,32 +39,29 @@ int bb84_protocol(std::bitset<7> & alice_basis, std::bitset<7> & bob_basis,
 			errors += 1;
 		}
 	}
-
 	return errors;
 }
 
-int bbm92_protocol() {
-	return 1;
-}
-
-int e91_protocol() {
-	return 2;
-}
 
 int main() {
-	// basic bitwise addition
-	// step 1: generate the lists
-	std::bitset<7>  alice_basis("1010100");
-	std::bitset<7>  bob_basis("1000110");
+
+	keyBits key1(1);
+	keyBits key2(5);
+	keyBits key3 = key1 + key2;
+	int sum = key3.getSize();
+	std::cout << sum;
+
+	//std::bitset<7>  alice_basis("1010100");
+	//std::bitset<7>  bob_basis("1000110");
 
 	// step 2: generate the states/measurement outcomes
-	std::bitset<7> alice_states("1111111");
-	std::bitset<7> bob_states("1111111");
+	//std::bitset<7> alice_states("1111111");
+	//std::bitset<7> bob_states("1111111");
 
-	std::cout << "bb84 protocol:" << bb84_protocol(alice_basis, bob_basis, alice_states,
-		bob_states) << "\n";
+	//std::cout << "bb84 protocol:" << bb84_protocol(alice_basis, bob_basis, alice_states,
+	//	bob_states) << "\n";
 
-	Node firstNode = Node("importantNode");
-	std::cout << firstNode.getName();
+	//Node firstNode = Node("importantNode");
+	//std::cout << firstNode.getName();
 	return 0;
 }
