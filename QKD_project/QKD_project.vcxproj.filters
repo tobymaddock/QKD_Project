@@ -24,6 +24,9 @@
     <ClCompile Include="protocols.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="keyBits.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="protocols.hpp">

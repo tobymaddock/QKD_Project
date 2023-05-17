@@ -1,13 +1,2 @@
 ﻿  main.cpp
-C:\Users\tobym\source\repos\QKD_project\QKD_project\main.cpp(51,2): error C2065: 'keyBits': undeclared identifier
-C:\Users\tobym\source\repos\QKD_project\QKD_project\main.cpp(51,10): error C2146: syntax error: missing ';' before identifier 'key1'
-C:\Users\tobym\source\repos\QKD_project\QKD_project\main.cpp(51,10): error C3861: 'key1': identifier not found
-C:\Users\tobym\source\repos\QKD_project\QKD_project\main.cpp(52,2): error C2065: 'keyBits': undeclared identifier
-C:\Users\tobym\source\repos\QKD_project\QKD_project\main.cpp(52,10): error C2146: syntax error: missing ';' before identifier 'key2'
-C:\Users\tobym\source\repos\QKD_project\QKD_project\main.cpp(52,10): error C3861: 'key2': identifier not found
-C:\Users\tobym\source\repos\QKD_project\QKD_project\main.cpp(53,2): error C2065: 'keyBits': undeclared identifier
-C:\Users\tobym\source\repos\QKD_project\QKD_project\main.cpp(53,10): error C2146: syntax error: missing ';' before identifier 'key3'
-C:\Users\tobym\source\repos\QKD_project\QKD_project\main.cpp(53,10): error C2065: 'key3': undeclared identifier
-C:\Users\tobym\source\repos\QKD_project\QKD_project\main.cpp(53,17): error C2065: 'key1': undeclared identifier
-C:\Users\tobym\source\repos\QKD_project\QKD_project\main.cpp(53,24): error C2065: 'key2': undeclared identifier
-C:\Users\tobym\source\repos\QKD_project\QKD_project\main.cpp(54,12): error C2065: 'key3': undeclared identifier
+  QKD_project.vcxproj -> C:\Users\tobym\source\repos\QKD_project\x64\Debug\QKD_project.exe

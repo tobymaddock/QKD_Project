@@ -42,14 +42,22 @@ int bb84_protocol(std::bitset<7> & alice_basis, std::bitset<7> & bob_basis,
 	return errors;
 }
 
+void printKey(const bool arr[], int indexSize) {
+	
+	for (int i = 0; i < indexSize; i++) {
+		std::cout << arr[i] << "\n";
+	}
+}
+
 
 int main() {
 
-	keyBits key1(1);
+	keyBits key1(5);
 	keyBits key2(5);
 	keyBits key3 = key1 + key2;
-	int sum = key3.getSize();
-	std::cout << sum;
+	const bool* arr = key3.getKey();
+	printKey(arr, key3.getSize());
+
 
 	//std::bitset<7>  alice_basis("1010100");
 	//std::bitset<7>  bob_basis("1000110");

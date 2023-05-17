@@ -1,5 +1,8 @@
 // classes corresponding to each QKD protocol
 
+#ifndef PROTOCOLS_HPP
+#define PROTOCOLS_HPP
+
 class Protocol {
 public:
 	void checkMatchingBasis();
@@ -22,3 +25,5 @@ class E91 : private Protocol {
 public:
 	E91() {}
 };
+
+#endif

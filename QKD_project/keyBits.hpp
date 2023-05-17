@@ -1,3 +1,9 @@
+#include <algorithm>
+
+#ifndef KEYBITS_HPP
+#define KEYBITS_HPP
+
+
 
 // generic class for storing/mainipulating key bits for qkd protocols
 // will store 'bits' as a list of bools
@@ -6,27 +12,20 @@
 class keyBits {
 public:
 	// constructors
-	keyBits(int size = 0) {
-		itsSize = size;
-		pKeys = new bool[size];
-		for (int i = 0; i < size; i++) {
-			pKeys[i] = 1;
-		}
-	}
+	keyBits(int size = 0);
 
 	// copy constructor
-	keyBits(const keyBits& rhs) {
-		pKeys = new bool[rhs.getSize()];
-		*pKeys = *(rhs.pKeys);
-	}
+	keyBits(const keyBits& rhs);
 
 	// destructor
 	~keyBits() { delete pKeys; }
 
 	// accessors
-	int getSize() const {
-		return itsSize;
+	int getSize() const;
+	const bool* getKey() const{
+		return pKeys;
 	}
+	void setKey(const bool* arr);
 
 	//operators:
 	//indexing:
@@ -37,13 +36,26 @@ public:
 	//'^' to XOR two keyBits objects:
 
 	// '+' to return an object with the rhs appended to the lhs
+
 	keyBits operator+(const keyBits& rhs) const {
-		int sum = itsSize + rhs.getSize();
+		const int sum = itsSize + rhs.getSize();
 		keyBits key(sum);
+		bool* result = new bool[sum];
+		concatenateArrays(pKeys, itsSize, rhs.getKey(), rhs.getSize(), result);
+		key.setKey(result);
 		return key;
 	}
 
 private:
+
+	// function to concatenate arrays
+	void concatenateArrays(const bool* arr1, int size1, const bool* arr2, int size2, bool* result) const{
+		std::copy(arr1, arr1 + size1, result);
+		std::copy(arr2, arr2 + size2, result + size1);
+	}
 	int itsSize;
 	bool* pKeys;
+
 };
+
+#endif
