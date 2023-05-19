@@ -1,4 +1,6 @@
 # include "keyBits.hpp"
+# include <iostream>
+
 
 // constructor
 keyBits::keyBits(int size) {
@@ -6,6 +8,15 @@ keyBits::keyBits(int size) {
 	pKeys = new bool[size];
 	for (int i = 0; i < size; i++) {
 		pKeys[i] = 1;
+	}
+}
+
+// constructor
+keyBits::keyBits(const std::string& bitAsString) {
+	itsSize = bitAsString.length();
+	pKeys = new bool[itsSize];
+	for (int i = 0; i < itsSize; i++) {
+		pKeys[i] = (bitAsString[i] == '1');
 	}
 }
 

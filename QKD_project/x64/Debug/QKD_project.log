@@ -1,2 +1,5 @@
 ﻿  main.cpp
+  node.cpp
+  Generating Code...
+C:\Users\tobym\source\repos\QKD_project\QKD_project\keyBits.hpp(68): warning C4715: 'keyBits::operator^': not all control paths return a value
   QKD_project.vcxproj -> C:\Users\tobym\source\repos\QKD_project\x64\Debug\QKD_project.exe

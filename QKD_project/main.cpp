@@ -9,6 +9,28 @@
 
 using namespace std;
 
+void unitTest_XOR() {
+
+	// will use this to test 
+
+
+
+}
+
+
+void unitTest_addition() {
+
+
+
+
+
+}
+
+
+
+
+
+
 int bb84_protocol(std::bitset<7> & alice_basis, std::bitset<7> & bob_basis,
 	std::bitset<7> & alice_states, std::bitset<7> & bob_states) {
 	// gonna break this down into a bunch of steps - for now will skip
@@ -42,21 +64,27 @@ int bb84_protocol(std::bitset<7> & alice_basis, std::bitset<7> & bob_basis,
 	return errors;
 }
 
+
+
+
+
+
+
 void printKey(const bool arr[], int indexSize) {
 	
 	for (int i = 0; i < indexSize; i++) {
-		std::cout << arr[i] << "\n";
+		std::cout << arr[i];
 	}
 }
 
 
 int main() {
-
-	keyBits key1(5);
-	keyBits key2(5);
-	keyBits key3 = key1 + key2;
-	const bool* arr = key3.getKey();
-	printKey(arr, key3.getSize());
+	keyBits krey("11111");
+	keyBits krey2("11111");
+	keyBits krey3 = krey^krey2; // XOR operation
+	std::cout << "new size: " << krey3.getSize() << "\n";
+	const bool* arr = krey3.getKey();
+	printKey(arr, krey3.getSize());
 
 
 	//std::bitset<7>  alice_basis("1010100");
